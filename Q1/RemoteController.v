@@ -48,36 +48,36 @@ begin
 			end
 	end
 	S_READING_KEY_CODE:
-	begin				
+	begin			
+		key_code = {key_code, serial};	
 		if(counter == 7)
 			begin
 			next_state <= S_READING_INV_KEY_CODE;
 			counter <= 0;
 			end
 		else
-			begin
-			key_code = {key_code, serial};
+			begin			
 			counter <= counter + 4'b0001;
 			next_state <= S_READING_KEY_CODE;
 			end
 	end
 	S_READING_INV_KEY_CODE:
 	begin		
+		key_inv_code = {key_inv_code, serial};
 		if(counter == 7)
 			begin
 			next_state <= S_COMPARISON;
 			counter <= 0;
 			end
 		else
-			begin
-			key_inv_code = {key_inv_code, serial};
+			begin			
 			counter <= counter + 4'b0001;
 			next_state <= S_READING_INV_KEY_CODE;	
 			end
 	end	
 	S_COMPARISON:
 	begin
-		if(key_code ^ key_inv_code == 8'b11111111) next_state <= S_VALID_KEY_DETECTED;
+		if((key_code ^ key_inv_code) == 8'b11111111) next_state <= S_VALID_KEY_DETECTED;
 		else next_state <= S_AWAITING_0;
 	end
 	S_VALID_KEY_DETECTED:
@@ -93,7 +93,7 @@ begin
 	endcase
 end
 
-always @ (posedge clk or negedge reset)
+always @ (negedge clk or negedge reset)
 begin
 	if(!reset)
 		current_state <= S_AWAITING_0;
