@@ -6,6 +6,19 @@ output reg [7:0] remote_key;
 reg [7:0] key_code, key_inv_code;
 reg [3:0] counter;
 reg [2:0] current_state, next_state;
+wire A = key_code[4];
+wire B = key_code[3];
+wire C = key_code[2];
+wire D = key_code[1];
+wire E = key_code[0];
+wire KEY_EXISTS = (key_code[7:5] == 3'b000) && (((~A)&(~B)) || 
+			 ((~B)&(~C)) ||
+			 ((~B)&(~E)) ||
+			 (A&D) ||
+			 ((~A)&(~C)&(~D)) ||
+			 ((~A)&(~D)&(~E)) ||
+			 ((~C)&(~D)&(~E)) ||
+			 ((C)&(D)&(E)));
 
 parameter
 	INVALID_KEY = 8'hFF,
@@ -77,7 +90,8 @@ begin
 	end	
 	S_COMPARISON:
 	begin
-		if((key_code ^ key_inv_code) == 8'b11111111) next_state <= S_VALID_KEY_DETECTED;
+		if(((key_code ^ key_inv_code) == 8'b11111111) && (KEY_EXISTS == 1'b1)) 
+			next_state <= S_VALID_KEY_DETECTED;		
 		else next_state <= S_AWAITING_0;
 	end
 	S_VALID_KEY_DETECTED:

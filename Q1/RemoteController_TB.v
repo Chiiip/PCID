@@ -19,7 +19,7 @@ initial begin
     serial = 1;
     reset = 0;
     #20 reset = 1;
-// VALID KEY CODE
+// VALID KEY CODE - KEY 0x0F
 // START BIT
     #3 serial = 0;  
     #10 serial = 1;
@@ -41,21 +41,67 @@ initial begin
     #10 serial = 1;
     #10 serial = 0;
 // KEY CODE  
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
     #10 serial = 1;
-    #10 serial = 0;
-    #10 serial = 0;
-    #10 serial = 0;
-    #10 serial = 0;
-    #10 serial = 0;
-    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 1;
     #10 serial = 1;
 // INV KEY CODE  
+    #10 serial = 1;
+    #10 serial = 1;
+    #10 serial = 1;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+// END
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
+
+// INVALID INV KEY CODE - KEY 0x0F
+// START BIT
+    #3 serial = 0;  
+    #10 serial = 1;
+// CUSTOM CODE
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+// KEY CODE  
+    #10 serial = 0;
+    #10 serial = 0;
+    #10 serial = 0;
     #10 serial = 0;
     #10 serial = 1;
     #10 serial = 1;
     #10 serial = 1;
     #10 serial = 1;
+// INV KEY CODE  
     #10 serial = 1;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 0;
     #10 serial = 1;
     #10 serial = 0;
 // END
@@ -65,7 +111,7 @@ initial begin
     #10 serial = 0;
     #10 serial = 0;
 
-// INVALID KEY CODE
+// INVALID KEY CODE - KEY 0x0A (NOT IN KEY LIST)
 // START BIT
     #3 serial = 0;  
     #10 serial = 1;
@@ -87,23 +133,23 @@ initial begin
     #10 serial = 1;
     #10 serial = 0;
 // KEY CODE  
-    #10 serial = 1;
     #10 serial = 0;
     #10 serial = 0;
-    #10 serial = 0;
-    #10 serial = 1;
     #10 serial = 0;
     #10 serial = 0;
     #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
 // INV KEY CODE  
-    #10 serial = 0;
-    #10 serial = 1;
-    #10 serial = 1;
     #10 serial = 1;
     #10 serial = 1;
     #10 serial = 1;
     #10 serial = 1;
     #10 serial = 0;
+    #10 serial = 1;
+    #10 serial = 0;
+    #10 serial = 1;
 // END
     #10 serial = 0;
     #10 serial = 0;
@@ -111,7 +157,6 @@ initial begin
     #10 serial = 0;
     #10 serial = 0;
     #5 $stop;
-
 
 end
 endmodule
