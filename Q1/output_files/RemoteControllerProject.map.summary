@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 28 16:14:19 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : RemoteControllerProject
+Top-level Entity Name : RemoteControllerProject
+Family : Cyclone IV E
+Total logic elements : 62
+    Total combinational functions : 55
+    Dedicated logic registers : 34
+Total registers : 34
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

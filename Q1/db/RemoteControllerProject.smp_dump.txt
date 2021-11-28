@@ -1,0 +1,20 @@
+
+State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|current_state
+Name current_state.S_VALID_KEY_DETECTED current_state.S_COMPARISON current_state.S_READING_INV_KEY_CODE current_state.S_READING_KEY_CODE current_state.S_READING_CUSTOM_CODE current_state.S_AWAITING_1 current_state.S_AWAITING_0 
+current_state.S_AWAITING_0 0 0 0 0 0 0 0 
+current_state.S_AWAITING_1 0 0 0 0 0 1 1 
+current_state.S_READING_CUSTOM_CODE 0 0 0 0 1 0 1 
+current_state.S_READING_KEY_CODE 0 0 0 1 0 0 1 
+current_state.S_READING_INV_KEY_CODE 0 0 1 0 0 0 1 
+current_state.S_COMPARISON 0 1 0 0 0 0 1 
+current_state.S_VALID_KEY_DETECTED 1 0 0 0 0 0 1 
+
+State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|next_state
+Name next_state.S_VALID_KEY_DETECTED next_state.S_COMPARISON next_state.S_READING_INV_KEY_CODE next_state.S_READING_KEY_CODE next_state.S_READING_CUSTOM_CODE next_state.S_AWAITING_1 next_state.S_AWAITING_0 
+next_state.S_AWAITING_0 0 0 0 0 0 0 0 
+next_state.S_AWAITING_1 0 0 0 0 0 1 1 
+next_state.S_READING_CUSTOM_CODE 0 0 0 0 1 0 1 
+next_state.S_READING_KEY_CODE 0 0 0 1 0 0 1 
+next_state.S_READING_INV_KEY_CODE 0 0 1 0 0 0 1 
+next_state.S_COMPARISON 0 1 0 0 0 0 1 
+next_state.S_VALID_KEY_DETECTED 1 0 0 0 0 0 1 
