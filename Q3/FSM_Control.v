@@ -10,10 +10,10 @@ parameter
 	get_address = 8'b00000010,
 	enable_read = 8'b00000100,
 	accumulate = 8'b00001000,
-	increase_address = 8'b00010000,
-	reset_v = 8'b00100000,
-	reset_output = 8'b01000000,
-	reset_y = 8'b10000000;
+	increase_v = 8'b00010000,
+	increase_u = 8'b00100000,
+	increase_y = 8'b01000000,
+	increase_x = 8'b10000000;
 
 
 always @ (current_state or start or u or v or x or y)
@@ -34,32 +34,40 @@ case (current_state)
 		end
 	accumulate : 
 		begin
-			next_state = increase_address;
+			next_state = increase_v;
 		end
-	increase_address:
+	increase_v:
 		begin
-			if (v == 3'b000) next_state = reset_v;
+			if (v == 3'b111)
+				begin
+					if (u == 3'b111) 
+						begin
+							if (y == 3'b111)
+								begin
+									if (x == 3'b111)
+										begin
+											next_state = idle_state;
+										end
+									else next_state = increase_x;
+								end
+							else next_state = increase_y;
+						end
+					else next_state = increase_u;
+				end
 			else next_state = get_address;
 		end
-	reset_v:
+	increase_u:
 		begin
 			next_state = get_address;
 		end
-	/*estado2 : 
+	increase_y:
 		begin
-		if (moeda) 
-			begin
-			refri = 1;
-			estadoFuturo = estadoInicial;			
-			end
-		else if (desiste)
-			begin 
-			troco = 1;
-			estadoFuturo = estadoInicial;
-			end
-		else
-		estadoFuturo = estado2;
-		end*/
+			next_state = get_address;
+		end
+	increase_x:
+		begin
+			next_state = get_address;
+		end
 	default : next_state = idle_state;
 endcase
 end
@@ -76,12 +84,18 @@ begin
 				begin
 					u <= 000;
 					v <= 000;
+					x <= 000;
+					y <= 000;
+					reset_MAC <= 1;
 					read_enable <= 0;
+
+					if (address == 6'b111111) ready <= 1;
+					else ready <= 0;
 				end
 			get_address: 
 				begin
-					v <= v + 1;
 					address <= {u, v};
+					reset_MAC <= 1;
 				end
 			enable_read:
 				begin
@@ -91,14 +105,30 @@ begin
 				begin
 					active_MAC <= 1;
 				end
-			increase_address:
+			increase_v:
 				begin
 					read_enable <= 0;
 					active_MAC <= 0;
+					v <= v + 1;
 				end
-			reset_v:
+			increase_u:
 				begin
 					u <= u + 1;
+					next_state <= get_address;
+				end
+			increase_y:
+				begin
+					u <= u + 1;
+					y <= y + 1;
+					reset_MAC <= 0;
+					next_state <= get_address;
+				end
+			increase_x:
+				begin
+					u <= u + 1;
+					y <= y + 1;
+					x <= x + 1;
+					next_state <= get_address;
 				end
 			default: next_state <= next_state;
 		endcase
@@ -122,146 +152,20 @@ initial begin
 
 start = 1;
 reset = 1;
+
 #50 clock = 1;
 #50 clock = 0;
 #50 clock = 1;
 #50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
+
+start = 0;
+while( 1 <= 10 )
+
+	begin
+		#50 clock = 1;
+		#50 clock = 0;
+	end 
+
 end
 endmodule
  
