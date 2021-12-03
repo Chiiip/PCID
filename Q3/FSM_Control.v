@@ -34,10 +34,6 @@ case (current_state)
 		end
 	accumulate : 
 		begin
-			next_state = increase_v;
-		end
-	increase_v:
-		begin
 			if (v == 3'b111)
 				begin
 					if (u == 3'b111) 
@@ -54,7 +50,11 @@ case (current_state)
 						end
 					else next_state = increase_u;
 				end
-			else next_state = get_address;
+			else next_state = increase_v;
+		end
+	increase_v:
+		begin
+			next_state = get_address;
 		end
 	increase_u:
 		begin
@@ -79,23 +79,30 @@ begin
 	else
 	begin
 		current_state <= next_state;
-		case (current_state)
+		case (next_state)
 			idle_state: 
 				begin
 					u <= 000;
 					v <= 000;
 					x <= 000;
 					y <= 000;
-					reset_MAC <= 1;
 					read_enable <= 0;
 
-					if (address == 6'b111111) ready <= 1;
-					else ready <= 0;
+					if (address == 6'b111111) 
+					begin
+						ready <= 1;
+						reset_MAC <= 0;
+					end
+					else begin
+						ready <= 0;
+						reset_MAC <= 1;
+					end
 				end
 			get_address: 
 				begin
 					address <= {u, v};
 					reset_MAC <= 1;
+					ready <= 0;
 				end
 			enable_read:
 				begin
@@ -113,22 +120,31 @@ begin
 				end
 			increase_u:
 				begin
+					read_enable <= 0;
+					active_MAC <= 0;
+					v <= v + 1;
 					u <= u + 1;
-					next_state <= get_address;
 				end
 			increase_y:
 				begin
+					read_enable <= 0;
+					active_MAC <= 0;
+					reset_MAC <= 0;
+					ready <= 1;
+					v <= v + 1;
 					u <= u + 1;
 					y <= y + 1;
-					reset_MAC <= 0;
-					next_state <= get_address;
 				end
 			increase_x:
 				begin
+					read_enable <= 0;
+					active_MAC <= 0;
+					reset_MAC <= 0;
+					ready <= 1;
+					v <= v + 1;
 					u <= u + 1;
 					y <= y + 1;
 					x <= x + 1;
-					next_state <= get_address;
 				end
 			default: next_state <= next_state;
 		endcase
@@ -136,36 +152,5 @@ begin
 end
 
 
-endmodule
-
-
-module FSM_test_bench();
-
-reg start, reset, clock;
-wire[2:0] u, v, x, y;
-wire active_MAC, reset_MAC, read_enable, ready;
-wire[5:0] address;
-
-FSM_Control teste(start, clock, reset, ready, u, v, x, y, active_MAC, read_enable, address, reset_MAC);
-
-initial begin
-
-start = 1;
-reset = 1;
-
-#50 clock = 1;
-#50 clock = 0;
-#50 clock = 1;
-#50 clock = 0;
-
-start = 0;
-while( 1 <= 10 )
-
-	begin
-		#50 clock = 1;
-		#50 clock = 0;
-	end 
-
-end
 endmodule
  
