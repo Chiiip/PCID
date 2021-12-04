@@ -1,0 +1,56 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile C:/Users/limaa/Documents/PCID/Q1/RemoteController.v
+project open C:/Users/limaa/Documents/PCID/Q2/Q2_testbench
+# Loading project Q2_testbench
+# Compile of accumulator_TB.v was successful.
+# Compile of accumulator.v was successful.
+# Compile of External_RAM.vhd was successful.
+# Compile of FSM.v failed with 6 errors.
+# Compile of TOP.v was successful.
+# Compile of TOP_TB.v was successful.
+# 6 compiles, 1 failed with 6 errors.
+# Compile of accumulator_TB.v was successful.
+# Compile of accumulator.v was successful.
+# Compile of External_RAM.vhd was successful.
+# Compile of FSM.v failed with 6 errors.
+# Compile of TOP.v was successful.
+# Compile of TOP_TB.v was successful.
+# 6 compiles, 1 failed with 6 errors.
+# Error opening C:/Users/limaa/Documents/PCID/Q2/(vlog-13069) C:/Users/limaa/Documents/PCID/Q2/FSM.v
+# Path name 'C:/Users/limaa/Documents/PCID/Q2/(vlog-13069) C:/Users/limaa/Documents/PCID/Q2/FSM.v' doesn't exist.
+# Compile of accumulator_TB.v was successful.
+# Compile of accumulator.v was successful.
+# Compile of External_RAM.vhd was successful.
+# Compile of FSM.v failed with 4 errors.
+# Compile of TOP.v was successful.
+# Compile of TOP_TB.v was successful.
+# 6 compiles, 1 failed with 4 errors.
+# Error opening C:/Users/limaa/Documents/PCID/Q2/(vlog-13069) C:/Users/limaa/Documents/PCID/Q2/FSM.v
+# Path name 'C:/Users/limaa/Documents/PCID/Q2/(vlog-13069) C:/Users/limaa/Documents/PCID/Q2/FSM.v' doesn't exist.
+# Compile of accumulator_TB.v was successful.
+# Compile of accumulator.v was successful.
+# Compile of External_RAM.vhd was successful.
+# Compile of FSM.v was successful.
+# Compile of TOP.v was successful.
+# Compile of TOP_TB.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.TOP_test_bench
+# vsim -gui work.TOP_test_bench 
+# Start time: 17:12:56 on Dec 03,2021
+# Loading work.TOP_test_bench
+# Loading work.TOP
+# Loading work.FSM
+# Loading work.accumulator
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.external_ram(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+quit -sim
+# End time: 17:13:36 on Dec 03,2021, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 0

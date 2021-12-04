@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RemoteControllerProject
-Sun Nov 28 16:14:19 2021
+Fri Dec 03 15:26:12 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,18 +14,17 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|current_state
- 10. State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|next_state
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: remote_controller:remote_controller_inst
- 15. Parameter Settings for User Entity Instance: clock_divider:clock_divider_inst|altpll:altpll_component
- 16. altpll Parameter Settings by Entity Instance
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: remote_controller:remote_controller_inst
+ 14. Parameter Settings for User Entity Instance: clock_divider:clock_divider_inst|altpll:altpll_component
+ 15. altpll Parameter Settings by Entity Instance
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,20 +50,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 28 16:14:19 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 03 15:26:12 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RemoteControllerProject                     ;
 ; Top-level Entity Name              ; RemoteControllerProject                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 62                                          ;
-;     Total combinational functions  ; 55                                          ;
-;     Dedicated logic registers      ; 34                                          ;
-; Total registers                    ; 34                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 1                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -163,12 +162,10 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -189,52 +186,44 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                 ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                         ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 62                                                                                                            ;
-;                                             ;                                                                                                               ;
-; Total combinational functions               ; 55                                                                                                            ;
-; Logic element usage by number of LUT inputs ;                                                                                                               ;
-;     -- 4 input functions                    ; 21                                                                                                            ;
-;     -- 3 input functions                    ; 7                                                                                                             ;
-;     -- <=2 input functions                  ; 27                                                                                                            ;
-;                                             ;                                                                                                               ;
-; Logic elements by mode                      ;                                                                                                               ;
-;     -- normal mode                          ; 55                                                                                                            ;
-;     -- arithmetic mode                      ; 0                                                                                                             ;
-;                                             ;                                                                                                               ;
-; Total registers                             ; 34                                                                                                            ;
-;     -- Dedicated logic registers            ; 34                                                                                                            ;
-;     -- I/O registers                        ; 0                                                                                                             ;
-;                                             ;                                                                                                               ;
-; I/O pins                                    ; 12                                                                                                            ;
-;                                             ;                                                                                                               ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                             ;
-;                                             ;                                                                                                               ;
-; Total PLLs                                  ; 1                                                                                                             ;
-;     -- PLLs                                 ; 1                                                                                                             ;
-;                                             ;                                                                                                               ;
-; Maximum fan-out node                        ; clock_divider:clock_divider_inst|altpll:altpll_component|clock_divider_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 35                                                                                                            ;
-; Total fan-out                               ; 273                                                                                                           ;
-; Average fan-out                             ; 2.39                                                                                                          ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+;                                             ;                ;
+; Total combinational functions               ; 0              ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 0              ;
+;     -- 3 input functions                    ; 0              ;
+;     -- <=2 input functions                  ; 0              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 0              ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 12             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; LEDG[0]~output ;
+; Maximum fan-out                             ; 1              ;
+; Total fan-out                               ; 12             ;
+; Average fan-out                             ; 0.50           ;
++---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name             ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |RemoteControllerProject                       ; 55 (0)              ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |RemoteControllerProject                                                                                              ; RemoteControllerProject ; work         ;
-;    |clock_divider:clock_divider_inst|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RemoteControllerProject|clock_divider:clock_divider_inst                                                             ; clock_divider           ; work         ;
-;       |altpll:altpll_component|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RemoteControllerProject|clock_divider:clock_divider_inst|altpll:altpll_component                                     ; altpll                  ; work         ;
-;          |clock_divider_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RemoteControllerProject|clock_divider:clock_divider_inst|altpll:altpll_component|clock_divider_altpll:auto_generated ; clock_divider_altpll    ; work         ;
-;    |remote_controller:remote_controller_inst|  ; 55 (55)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RemoteControllerProject|remote_controller:remote_controller_inst                                                     ; remote_controller       ; work         ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name             ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------------------+--------------+
+; |RemoteControllerProject   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |RemoteControllerProject ; RemoteControllerProject ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -247,51 +236,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------------------------------+-----------------+
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|current_state                                                                                                                                                                                  ;
-+--------------------------------------+------------------------------------+----------------------------+--------------------------------------+----------------------------------+-------------------------------------+----------------------------+----------------------------+
-; Name                                 ; current_state.S_VALID_KEY_DETECTED ; current_state.S_COMPARISON ; current_state.S_READING_INV_KEY_CODE ; current_state.S_READING_KEY_CODE ; current_state.S_READING_CUSTOM_CODE ; current_state.S_AWAITING_1 ; current_state.S_AWAITING_0 ;
-+--------------------------------------+------------------------------------+----------------------------+--------------------------------------+----------------------------------+-------------------------------------+----------------------------+----------------------------+
-; current_state.S_AWAITING_0           ; 0                                  ; 0                          ; 0                                    ; 0                                ; 0                                   ; 0                          ; 0                          ;
-; current_state.S_AWAITING_1           ; 0                                  ; 0                          ; 0                                    ; 0                                ; 0                                   ; 1                          ; 1                          ;
-; current_state.S_READING_CUSTOM_CODE  ; 0                                  ; 0                          ; 0                                    ; 0                                ; 1                                   ; 0                          ; 1                          ;
-; current_state.S_READING_KEY_CODE     ; 0                                  ; 0                          ; 0                                    ; 1                                ; 0                                   ; 0                          ; 1                          ;
-; current_state.S_READING_INV_KEY_CODE ; 0                                  ; 0                          ; 1                                    ; 0                                ; 0                                   ; 0                          ; 1                          ;
-; current_state.S_COMPARISON           ; 0                                  ; 1                          ; 0                                    ; 0                                ; 0                                   ; 0                          ; 1                          ;
-; current_state.S_VALID_KEY_DETECTED   ; 1                                  ; 0                          ; 0                                    ; 0                                ; 0                                   ; 0                          ; 1                          ;
-+--------------------------------------+------------------------------------+----------------------------+--------------------------------------+----------------------------------+-------------------------------------+----------------------------+----------------------------+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++-------------------------------------------------------------+----------------------------------------+
+; Register name                                               ; Reason for Removal                     ;
++-------------------------------------------------------------+----------------------------------------+
+; remote_controller:remote_controller_inst|key_code[0..7]     ; Stuck at GND due to stuck port data_in ;
+; remote_controller:remote_controller_inst|key_inv_code[0..7] ; Stuck at GND due to stuck port data_in ;
+; remote_controller:remote_controller_inst|counter[0..3]      ; Lost fanout                            ;
+; Total Number of Removed Registers = 20                      ;                                        ;
++-------------------------------------------------------------+----------------------------------------+
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |RemoteControllerProject|remote_controller:remote_controller_inst|next_state                                                                                                                                                             ;
-+-----------------------------------+---------------------------------+-------------------------+-----------------------------------+-------------------------------+----------------------------------+-------------------------+-------------------------+
-; Name                              ; next_state.S_VALID_KEY_DETECTED ; next_state.S_COMPARISON ; next_state.S_READING_INV_KEY_CODE ; next_state.S_READING_KEY_CODE ; next_state.S_READING_CUSTOM_CODE ; next_state.S_AWAITING_1 ; next_state.S_AWAITING_0 ;
-+-----------------------------------+---------------------------------+-------------------------+-----------------------------------+-------------------------------+----------------------------------+-------------------------+-------------------------+
-; next_state.S_AWAITING_0           ; 0                               ; 0                       ; 0                                 ; 0                             ; 0                                ; 0                       ; 0                       ;
-; next_state.S_AWAITING_1           ; 0                               ; 0                       ; 0                                 ; 0                             ; 0                                ; 1                       ; 1                       ;
-; next_state.S_READING_CUSTOM_CODE  ; 0                               ; 0                       ; 0                                 ; 0                             ; 1                                ; 0                       ; 1                       ;
-; next_state.S_READING_KEY_CODE     ; 0                               ; 0                       ; 0                                 ; 1                             ; 0                                ; 0                       ; 1                       ;
-; next_state.S_READING_INV_KEY_CODE ; 0                               ; 0                       ; 1                                 ; 0                             ; 0                                ; 0                       ; 1                       ;
-; next_state.S_COMPARISON           ; 0                               ; 1                       ; 0                                 ; 0                             ; 0                                ; 0                       ; 1                       ;
-; next_state.S_VALID_KEY_DETECTED   ; 1                               ; 0                       ; 0                                 ; 0                             ; 0                                ; 0                       ; 1                       ;
-+-----------------------------------+---------------------------------+-------------------------+-----------------------------------+-------------------------------+----------------------------------+-------------------------+-------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------------------------+--------------------+
-; Register name                                            ; Reason for Removal ;
-+----------------------------------------------------------+--------------------+
-; remote_controller:remote_controller_inst|current_state~4 ; Lost fanout        ;
-; remote_controller:remote_controller_inst|current_state~5 ; Lost fanout        ;
-; remote_controller:remote_controller_inst|current_state~6 ; Lost fanout        ;
-; remote_controller:remote_controller_inst|next_state~2    ; Lost fanout        ;
-; remote_controller:remote_controller_inst|next_state~3    ; Lost fanout        ;
-; remote_controller:remote_controller_inst|next_state~4    ; Lost fanout        ;
-; Total Number of Removed Registers = 6                    ;                    ;
-+----------------------------------------------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register                   ;
++------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; remote_controller:remote_controller_inst|key_code[7] ; Stuck at GND              ; remote_controller:remote_controller_inst|counter[3],     ;
+;                                                      ; due to stuck port data_in ; remote_controller:remote_controller_inst|counter[2],     ;
+;                                                      ;                           ; remote_controller:remote_controller_inst|counter[1],     ;
+;                                                      ;                           ; remote_controller:remote_controller_inst|counter[0]      ;
+; remote_controller:remote_controller_inst|key_code[4] ; Stuck at GND              ; remote_controller:remote_controller_inst|key_inv_code[7] ;
+;                                                      ; due to stuck port data_in ;                                                          ;
++------------------------------------------------------+---------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -299,12 +267,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -314,7 +282,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |RemoteControllerProject|remote_controller:remote_controller_inst|counter[0] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |RemoteControllerProject|remote_controller:remote_controller_inst|counter[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
@@ -732,19 +700,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 34                          ;
-;     CLR               ; 7                           ;
-;     ENA               ; 16                          ;
-;     plain             ; 11                          ;
-; cycloneiii_lcell_comb ; 55                          ;
-;     normal            ; 55                          ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 21                          ;
-; cycloneiii_pll        ; 1                           ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.45                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -763,7 +724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 28 16:14:07 2021
+    Info: Processing started: Fri Dec 03 15:25:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RemoteControllerProject -c RemoteControllerProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -775,9 +736,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider File: C:/Users/limaa/Documents/PCID/Q1/clock_divider.v Line: 39
 Info (12127): Elaborating entity "RemoteControllerProject" for the top level hierarchy
 Info (12128): Elaborating entity "remote_controller" for hierarchy "remote_controller:remote_controller_inst"
-Warning (10230): Verilog HDL assignment warning at RemoteController.v(65): truncated value with size 9 to match size of target (8) File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 65
-Warning (10230): Verilog HDL assignment warning at RemoteController.v(79): truncated value with size 9 to match size of target (8) File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 79
-Warning (10235): Verilog HDL Always Construct warning at RemoteController.v(122): variable "key_code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 122
+Warning (10230): Verilog HDL assignment warning at RemoteController.v(114): truncated value with size 9 to match size of target (8) File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 114
+Warning (10230): Verilog HDL assignment warning at RemoteController.v(120): truncated value with size 9 to match size of target (8) File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 120
+Info (10264): Verilog HDL Case Statement information at RemoteController.v(100): all case item expressions in this case statement are onehot File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 100
+Critical Warning (10237): Verilog HDL warning at RemoteController.v(131): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 131
+Warning (10235): Verilog HDL Always Construct warning at RemoteController.v(138): variable "key_code" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/limaa/Documents/PCID/Q1/RemoteController.v Line: 138
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clock_divider_inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "clock_divider:clock_divider_inst|altpll:altpll_component" File: C:/Users/limaa/Documents/PCID/Q1/clock_divider.v Line: 90
 Info (12130): Elaborated megafunction instantiation "clock_divider:clock_divider_inst|altpll:altpll_component" File: C:/Users/limaa/Documents/PCID/Q1/clock_divider.v Line: 90
@@ -839,20 +802,34 @@ Info (12133): Instantiated megafunction "clock_divider:clock_divider_inst|altpll
 Info (12021): Found 1 design units, including 1 entities, in source file db/clock_divider_altpll.v
     Info (12023): Found entity 1: clock_divider_altpll File: C:/Users/limaa/Documents/PCID/Q1/db/clock_divider_altpll.v Line: 29
 Info (12128): Elaborating entity "clock_divider_altpll" for hierarchy "clock_divider:clock_divider_inst|altpll:altpll_component|clock_divider_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "clock_divider:clock_divider_inst|altpll:altpll_component|clock_divider_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/limaa/Documents/PCID/Q1/db/clock_divider_altpll.v Line: 77
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at VCC
+    Warning (13410): Pin "LEDR[6]" is stuck at VCC
+    Warning (13410): Pin "LEDR[5]" is stuck at VCC
+    Warning (13410): Pin "LEDR[4]" is stuck at VCC
+    Warning (13410): Pin "LEDR[3]" is stuck at VCC
+    Warning (13410): Pin "LEDR[2]" is stuck at VCC
+    Warning (13410): Pin "LEDR[1]" is stuck at VCC
+    Warning (13410): Pin "LEDR[0]" is stuck at VCC
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/limaa/Documents/PCID/Q1/output_files/RemoteControllerProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "GPIO[0]"
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 62 logic cells
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun Nov 28 16:14:19 2021
-    Info: Elapsed time: 00:00:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Fri Dec 03 15:26:12 2021
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:25
 
 

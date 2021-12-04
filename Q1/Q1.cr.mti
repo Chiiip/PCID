@@ -1,0 +1,15 @@
+C:/Users/limaa/Documents/PCID/Q1/RemoteController.v {1 {vlog -work work -stats=none C:/Users/limaa/Documents/PCID/Q1/RemoteController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module remote_controller
+
+Top level modules:
+	remote_controller
+
+} {} {}} C:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v {1 {vlog -work work -stats=none C:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module remote_controller_test_bench
+
+Top level modules:
+	remote_controller_test_bench
+
+} {} {}}
