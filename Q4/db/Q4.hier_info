@@ -1,0 +1,18 @@
+|Q4
+LEDG[0] <= Semaforo:inst.NS
+LEDG[1] <= Semaforo:inst.LO
+SW[0] => Semaforo:inst.A
+SW[1] => Semaforo:inst.B
+SW[2] => Semaforo:inst.C
+SW[3] => Semaforo:inst.D
+
+
+|Q4|Semaforo:inst
+A => LO.IN0
+B => LO.IN1
+C => LO.IN0
+D => LO.IN1
+NS <= LO.DB_MAX_OUTPUT_PORT_TYPE
+LO <= LO.DB_MAX_OUTPUT_PORT_TYPE
+
+

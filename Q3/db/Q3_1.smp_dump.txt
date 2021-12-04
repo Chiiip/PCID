@@ -1,0 +1,11 @@
+
+State Machine - |Q3|FSM_Control:inst|current_state
+Name current_state.increase_x current_state.increase_y current_state.increase_u current_state.increase_v current_state.accumulate current_state.enable_read current_state.get_address current_state.idle_state 
+current_state.idle_state 0 0 0 0 0 0 0 0 
+current_state.get_address 0 0 0 0 0 0 1 1 
+current_state.enable_read 0 0 0 0 0 1 0 1 
+current_state.accumulate 0 0 0 0 1 0 0 1 
+current_state.increase_v 0 0 0 1 0 0 0 1 
+current_state.increase_u 0 0 1 0 0 0 0 1 
+current_state.increase_y 0 1 0 0 0 0 0 1 
+current_state.increase_x 1 0 0 0 0 0 0 1 

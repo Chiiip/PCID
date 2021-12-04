@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module FSM_test_bench();
 
 reg start, reset, clock;
@@ -142,6 +143,17 @@ begin
 		@(x)
 			count_x = count_x + 1;
 	end
+end
+
+initial
+begin
+    //Verificando se após um ready, o valor de u e v foi resetado para 0
+	@(posedge ready)
+		if (u != 3'b000 || v != 3'b000)
+        begin
+            $display("\n------------ Os valores de u e v não estão em zero logo após um sinal de ready! ------------\n"); 
+            $stop;
+        end
 end
 
 

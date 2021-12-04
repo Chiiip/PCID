@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4
+vFSM_Control
+Z0 !s110 1638498764
+!i10b 1
+!s100 8<XMCGIU^oUz=:[RajL2n0
+I091CaeR7lHdNLkGL;cVN`2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3
+w1638491171
+8D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v
+FD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v
+L0 1
+Z3 OV;L;10.6c;65
+r1
+!s85 0
+31
+Z4 !s108 1638498764.000000
+!s107 D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@f@s@m_@control
+vFSM_test_bench
+R0
+!i10b 1
+!s100 Z8NfJ5cd>IB@;0ha[5j?I1
+IfQDOf6GLD;Lckk0ePm6Q`3
+R1
+R2
+w1638498749
+8D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/TB_FSM_Control.v
+FD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/TB_FSM_Control.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/TB_FSM_Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/TB_FSM_Control.v|
+!i113 1
+R5
+R6
+n@f@s@m_test_bench

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Users/pedro/Documents/UFBA/2021.2/PCID
+vSemaforo
+Z0 !s110 1638554141
+!i10b 1
+!s100 @CiYNMb>URO57=AjX^3SE2
+InBF:cEL2hK[=Y=dGQh[l03
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4
+w1638553478
+8D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/Semaforo.v
+FD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/Semaforo.v
+L0 1
+Z3 OV;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1638554140.000000
+!s107 D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/Semaforo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/Semaforo.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@semaforo
+vSemaforo_test_bench
+R0
+!i10b 1
+!s100 l=0M_dCP24]J86EGk4IV20
+IL:E<XDg@_XmD;B:bN2Se[2
+R1
+R2
+w1638554134
+8D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/SemaforoTeste.v
+FD:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/SemaforoTeste.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1638554141.000000
+!s107 D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/SemaforoTeste.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q4/SemaforoTeste.v|
+!i113 1
+R4
+R5
+n@semaforo_test_bench

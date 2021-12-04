@@ -1,0 +1,10 @@
+module FSM_Control(start, clock, reset, ready, u, v, x, y, active_MAC, read_enable, address, reset_MAC);
+input start, clock, reset;
+output reg[2:0] u, v, x, y;
+output reg active_MAC, read_enable, reset_MAC, ready;
+output reg[5:0] address;
+
+
+
+
+endmodule

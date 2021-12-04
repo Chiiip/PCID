@@ -1,0 +1,8 @@
+D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v {1 {vlog -work work -stats=none D:/Users/pedro/Documents/UFBA/2021.2/PCID/Q3/FSM_Control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module FSM_Control
+
+Top level modules:
+	FSM_Control
+
+} {} {}}
