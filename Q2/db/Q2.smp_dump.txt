@@ -1,0 +1,14 @@
+
+State Machine - |Q2|TOP:inst|FSM:fsm_controller|current_state
+Name current_state.S_READY current_state.S_UPDATE_ADDRESS current_state.S_MEM_WAIT_WRITE current_state.S_MEM_WRITE current_state.S_CHECK_POSITION current_state.S_ACC_TRANSFER_DATA current_state.S_ACC_LOAD_DATA current_state.S_MEM_WAIT_READ current_state.S_MEM_READ current_state.S_CLEAR_ACC current_state.S_RESET 
+current_state.S_RESET 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_CLEAR_ACC 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_MEM_READ 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_MEM_WAIT_READ 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_ACC_LOAD_DATA 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_ACC_TRANSFER_DATA 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_CHECK_POSITION 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_MEM_WRITE 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_MEM_WAIT_WRITE 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_ADDRESS 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_READY 1 0 0 0 0 0 0 0 0 0 1 

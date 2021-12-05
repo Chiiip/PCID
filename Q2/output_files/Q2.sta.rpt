@@ -1,0 +1,1205 @@
+TimeQuest Timing Analyzer report for Q2
+Sat Dec 04 12:50:17 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'CLOCK_50'
+ 14. Slow 1200mV 85C Model Hold: 'CLOCK_50'
+ 15. Slow 1200mV 85C Model Recovery: 'CLOCK_50'
+ 16. Slow 1200mV 85C Model Removal: 'CLOCK_50'
+ 17. Slow 1200mV 85C Model Metastability Summary
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'CLOCK_50'
+ 25. Slow 1200mV 0C Model Hold: 'CLOCK_50'
+ 26. Slow 1200mV 0C Model Recovery: 'CLOCK_50'
+ 27. Slow 1200mV 0C Model Removal: 'CLOCK_50'
+ 28. Slow 1200mV 0C Model Metastability Summary
+ 29. Fast 1200mV 0C Model Setup Summary
+ 30. Fast 1200mV 0C Model Hold Summary
+ 31. Fast 1200mV 0C Model Recovery Summary
+ 32. Fast 1200mV 0C Model Removal Summary
+ 33. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 34. Fast 1200mV 0C Model Setup: 'CLOCK_50'
+ 35. Fast 1200mV 0C Model Hold: 'CLOCK_50'
+ 36. Fast 1200mV 0C Model Recovery: 'CLOCK_50'
+ 37. Fast 1200mV 0C Model Removal: 'CLOCK_50'
+ 38. Fast 1200mV 0C Model Metastability Summary
+ 39. Multicorner Timing Analysis Summary
+ 40. Board Trace Model Assignments
+ 41. Input Transition Times
+ 42. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 43. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 44. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 45. Setup Transfers
+ 46. Hold Transfers
+ 47. Recovery Transfers
+ 48. Removal Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths Summary
+ 52. Clock Status Summary
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Q2                                                  ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processors 3-12        ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; Q2.out.sdc    ; OK     ; Sat Dec 04 12:50:16 2021 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 111.67 MHz ; 111.67 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; 11.045 ; 0.000           ;
++----------+--------+-----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.402 ; 0.000           ;
++----------+-------+-----------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; 14.123 ; 0.000              ;
++----------+--------+--------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++----------+-------+--------------------+
+; Clock    ; Slack ; End Point TNS      ;
++----------+-------+--------------------+
+; CLOCK_50 ; 4.864 ; 0.000              ;
++----------+-------+--------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------+-------+--------------------------------+
+; Clock    ; Slack ; End Point TNS                  ;
++----------+-------+--------------------------------+
+; CLOCK_50 ; 9.659 ; 0.000                          ;
++----------+-------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                                                                                                      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.045 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.917      ; 9.755      ;
+; 11.182 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -3.010     ; 3.788      ;
+; 13.108 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.944      ; 7.834      ;
+; 13.108 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.944      ; 7.834      ;
+; 13.108 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.944      ; 7.834      ;
+; 13.108 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.944      ; 7.834      ;
+; 13.108 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.944      ; 7.834      ;
+; 14.624 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.313      ;
+; 15.209 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.103     ; 4.571      ;
+; 15.222 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.103     ; 4.558      ;
+; 15.610 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.103     ; 4.170      ;
+; 17.054 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.868      ;
+; 17.054 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.868      ;
+; 17.054 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.868      ;
+; 17.054 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.868      ;
+; 17.054 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.868      ;
+; 17.276 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.646      ;
+; 17.276 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.646      ;
+; 17.276 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.646      ;
+; 17.276 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.646      ;
+; 17.276 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.646      ;
+; 17.346 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.576      ;
+; 17.346 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.576      ;
+; 17.346 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.576      ;
+; 17.346 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.576      ;
+; 17.346 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.576      ;
+; 17.491 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.431      ;
+; 17.491 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.431      ;
+; 17.491 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.431      ;
+; 17.491 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.431      ;
+; 17.491 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.431      ;
+; 17.651 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.260      ;
+; 17.664 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.247      ;
+; 17.680 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.231      ;
+; 17.693 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.218      ;
+; 17.822 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.089      ;
+; 17.835 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 2.076      ;
+; 17.892 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.030      ;
+; 17.892 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.030      ;
+; 17.892 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.030      ;
+; 17.892 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.030      ;
+; 17.892 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 2.030      ;
+; 17.967 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.944      ;
+; 17.980 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.931      ;
+; 17.990 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.921      ;
+; 18.028 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.888      ;
+; 18.031 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.880      ;
+; 18.113 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.803      ;
+; 18.153 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.763      ;
+; 18.160 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.756      ;
+; 18.162 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.754      ;
+; 18.179 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.737      ;
+; 18.245 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.671      ;
+; 18.245 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.671      ;
+; 18.283 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.628      ;
+; 18.285 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.631      ;
+; 18.285 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.631      ;
+; 18.325 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.586      ;
+; 18.402 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.509      ;
+; 18.497 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.414      ;
+; 18.533 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.378      ;
+; 18.601 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.316      ;
+; 18.650 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 1.261      ;
+; 18.747 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.170      ;
+; 18.756 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.160      ;
+; 18.756 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.160      ;
+; 18.761 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.155      ;
+; 18.771 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.146      ;
+; 18.780 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.137      ;
+; 18.782 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.134      ;
+; 18.784 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 1.132      ;
+; 18.793 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.124      ;
+; 18.805 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.112      ;
+; 18.836 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 1.081      ;
+; 18.950 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.967      ;
+; 18.954 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.963      ;
+; 18.968 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.949      ;
+; 19.071 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.846      ;
+; 19.109 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.808      ;
+; 19.127 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.790      ;
+; 19.128 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.789      ;
+; 19.129 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.788      ;
+; 19.183 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.081     ; 0.734      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLOCK_50'                                                                                                                                                                      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.426 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.693      ;
+; 0.428 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.695      ;
+; 0.429 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.696      ;
+; 0.430 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.697      ;
+; 0.458 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.725      ;
+; 0.553 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.820      ;
+; 0.560 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.827      ;
+; 0.599 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.866      ;
+; 0.650 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.917      ;
+; 0.654 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.921      ;
+; 0.655 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 0.923      ;
+; 0.656 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.923      ;
+; 0.657 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 0.925      ;
+; 0.657 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 0.925      ;
+; 0.663 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 0.931      ;
+; 0.675 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 0.943      ;
+; 0.700 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.967      ;
+; 0.730 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.997      ;
+; 0.765 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.032      ;
+; 0.906 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.173      ;
+; 0.912 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.174      ;
+; 0.973 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.241      ;
+; 0.974 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.242      ;
+; 0.983 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.251      ;
+; 0.984 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.252      ;
+; 0.988 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.256      ;
+; 0.989 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.257      ;
+; 1.030 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.292      ;
+; 1.040 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.302      ;
+; 1.095 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.363      ;
+; 1.100 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.368      ;
+; 1.109 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.377      ;
+; 1.114 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.382      ;
+; 1.139 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.401      ;
+; 1.209 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.471      ;
+; 1.219 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 1.492      ;
+; 1.219 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 1.492      ;
+; 1.219 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 1.492      ;
+; 1.219 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 1.492      ;
+; 1.219 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 1.492      ;
+; 1.241 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.503      ;
+; 1.479 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.741      ;
+; 1.481 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.743      ;
+; 1.509 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.771      ;
+; 1.526 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.788      ;
+; 1.592 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.854      ;
+; 1.639 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.901      ;
+; 1.690 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.952      ;
+; 1.730 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.992      ;
+; 1.737 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 1.999      ;
+; 1.768 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.041      ;
+; 1.768 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.041      ;
+; 1.768 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.041      ;
+; 1.768 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.041      ;
+; 1.768 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.041      ;
+; 1.777 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 2.039      ;
+; 2.080 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.353      ;
+; 2.080 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.353      ;
+; 2.080 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.353      ;
+; 2.080 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.353      ;
+; 2.080 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.353      ;
+; 2.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.519      ;
+; 2.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.519      ;
+; 2.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.519      ;
+; 2.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.519      ;
+; 2.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.519      ;
+; 2.556 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.829      ;
+; 2.556 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.829      ;
+; 2.556 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.829      ;
+; 2.556 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.829      ;
+; 2.556 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.087      ; 2.829      ;
+; 3.840 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 3.989      ;
+; 4.137 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 4.286      ;
+; 4.167 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 4.316      ;
+; 4.381 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 5.619      ;
+; 5.960 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.058      ; 7.204      ;
+; 5.960 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.058      ; 7.204      ;
+; 5.960 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.058      ; 7.204      ;
+; 5.960 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.058      ; 7.204      ;
+; 5.960 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.058      ; 7.204      ;
+; 7.819 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.010      ; 8.939      ;
+; 8.486 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -2.917     ; 3.569      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'CLOCK_50'                                                                                                               ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
+; 14.123 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.939      ; 6.814      ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'CLOCK_50'                                                                                                               ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
+; 4.864 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 3.052      ; 6.102      ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 121.18 MHz ; 121.18 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 11.748 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.354 ; 0.000          ;
++----------+-------+----------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++----------+--------+-------------------+
+; Clock    ; Slack  ; End Point TNS     ;
++----------+--------+-------------------+
+; CLOCK_50 ; 14.652 ; 0.000             ;
++----------+--------+-------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++----------+-------+-------------------+
+; Clock    ; Slack ; End Point TNS     ;
++----------+-------+-------------------+
+; CLOCK_50 ; 4.576 ; 0.000             ;
++----------+-------+-------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.666 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                                                                       ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.748 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.639      ; 8.778      ;
+; 11.968 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -2.719     ; 3.293      ;
+; 13.694 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.671      ; 6.976      ;
+; 13.694 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.671      ; 6.976      ;
+; 13.694 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.671      ; 6.976      ;
+; 13.694 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.671      ; 6.976      ;
+; 13.694 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.671      ; 6.976      ;
+; 15.096 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 5.569      ;
+; 15.621 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.099     ; 4.167      ;
+; 15.637 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.099     ; 4.151      ;
+; 15.920 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.099     ; 3.868      ;
+; 17.318 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.614      ;
+; 17.318 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.614      ;
+; 17.318 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.614      ;
+; 17.318 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.614      ;
+; 17.318 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.614      ;
+; 17.501 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.431      ;
+; 17.501 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.431      ;
+; 17.501 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.431      ;
+; 17.501 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.431      ;
+; 17.501 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.431      ;
+; 17.570 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.362      ;
+; 17.570 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.362      ;
+; 17.570 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.362      ;
+; 17.570 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.362      ;
+; 17.570 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.362      ;
+; 17.696 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.236      ;
+; 17.696 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.236      ;
+; 17.696 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.236      ;
+; 17.696 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.236      ;
+; 17.696 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 2.236      ;
+; 17.890 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 2.031      ;
+; 17.908 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 2.013      ;
+; 17.915 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 2.006      ;
+; 17.933 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.988      ;
+; 18.036 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.885      ;
+; 18.054 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.867      ;
+; 18.057 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.875      ;
+; 18.057 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.875      ;
+; 18.057 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.875      ;
+; 18.057 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.875      ;
+; 18.057 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.875      ;
+; 18.145 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.776      ;
+; 18.188 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.733      ;
+; 18.197 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.724      ;
+; 18.218 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.703      ;
+; 18.235 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.691      ;
+; 18.309 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.617      ;
+; 18.336 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.590      ;
+; 18.351 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.575      ;
+; 18.354 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.572      ;
+; 18.380 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.546      ;
+; 18.424 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.502      ;
+; 18.425 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.501      ;
+; 18.442 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.479      ;
+; 18.451 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.475      ;
+; 18.452 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.474      ;
+; 18.492 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.429      ;
+; 18.560 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.361      ;
+; 18.646 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.275      ;
+; 18.665 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.256      ;
+; 18.740 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.187      ;
+; 18.777 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 1.144      ;
+; 18.876 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.051      ;
+; 18.885 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.041      ;
+; 18.885 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.041      ;
+; 18.886 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.040      ;
+; 18.896 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.031      ;
+; 18.902 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.024      ;
+; 18.903 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 1.023      ;
+; 18.906 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.021      ;
+; 18.918 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.009      ;
+; 18.920 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 1.007      ;
+; 18.958 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.969      ;
+; 19.044 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.883      ;
+; 19.058 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.869      ;
+; 19.071 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.856      ;
+; 19.158 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.769      ;
+; 19.193 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.734      ;
+; 19.216 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.711      ;
+; 19.217 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.710      ;
+; 19.217 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.710      ;
+; 19.268 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 0.659      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                                                       ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.354 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.386 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.629      ;
+; 0.396 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.639      ;
+; 0.396 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.639      ;
+; 0.397 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.640      ;
+; 0.416 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.659      ;
+; 0.508 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.751      ;
+; 0.514 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.757      ;
+; 0.547 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.790      ;
+; 0.596 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.839      ;
+; 0.599 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.843      ;
+; 0.600 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.843      ;
+; 0.600 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.844      ;
+; 0.601 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.844      ;
+; 0.602 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.846      ;
+; 0.606 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.850      ;
+; 0.619 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.863      ;
+; 0.639 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.882      ;
+; 0.670 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.913      ;
+; 0.712 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.955      ;
+; 0.834 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.077      ;
+; 0.837 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.075      ;
+; 0.885 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.129      ;
+; 0.888 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.132      ;
+; 0.888 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.132      ;
+; 0.889 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.133      ;
+; 0.899 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.143      ;
+; 0.899 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.143      ;
+; 0.954 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.192      ;
+; 0.969 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.207      ;
+; 0.988 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.232      ;
+; 0.998 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.242      ;
+; 0.999 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.243      ;
+; 1.009 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.253      ;
+; 1.048 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.286      ;
+; 1.115 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.353      ;
+; 1.142 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.380      ;
+; 1.151 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.400      ;
+; 1.151 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.400      ;
+; 1.151 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.400      ;
+; 1.151 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.400      ;
+; 1.151 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.400      ;
+; 1.365 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.603      ;
+; 1.372 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.610      ;
+; 1.397 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.635      ;
+; 1.405 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.643      ;
+; 1.473 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.711      ;
+; 1.512 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.750      ;
+; 1.560 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.798      ;
+; 1.595 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.833      ;
+; 1.599 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.837      ;
+; 1.605 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.854      ;
+; 1.605 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.854      ;
+; 1.605 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.854      ;
+; 1.605 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.854      ;
+; 1.605 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 1.854      ;
+; 1.634 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.872      ;
+; 1.904 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.153      ;
+; 1.904 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.153      ;
+; 1.904 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.153      ;
+; 1.904 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.153      ;
+; 1.904 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.153      ;
+; 2.056 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.305      ;
+; 2.056 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.305      ;
+; 2.056 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.305      ;
+; 2.056 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.305      ;
+; 2.056 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.305      ;
+; 2.352 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.601      ;
+; 2.352 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.601      ;
+; 2.352 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.601      ;
+; 2.352 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.601      ;
+; 2.352 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.078      ; 2.601      ;
+; 3.461 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.025      ; 3.583      ;
+; 3.784 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.025      ; 3.906      ;
+; 3.820 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.025      ; 3.942      ;
+; 4.142 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.079      ;
+; 5.588 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.772      ; 6.531      ;
+; 5.588 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.772      ; 6.531      ;
+; 5.588 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.772      ; 6.531      ;
+; 5.588 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.772      ; 6.531      ;
+; 5.588 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.772      ; 6.531      ;
+; 7.249 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.719      ; 8.065      ;
+; 7.791 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -2.639     ; 3.152      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'CLOCK_50'                                                                                                                ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
+; 14.652 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 2.666      ; 6.013      ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'CLOCK_50'                                                                                                                ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
+; 4.576 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 2.766      ; 5.513      ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 13.856 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.181 ; 0.000          ;
++----------+-------+----------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++----------+--------+-------------------+
+; Clock    ; Slack  ; End Point TNS     ;
++----------+--------+-------------------+
+; CLOCK_50 ; 15.525 ; 0.000             ;
++----------+--------+-------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++----------+-------+-------------------+
+; Clock    ; Slack ; End Point TNS     ;
++----------+-------+-------------------+
+; CLOCK_50 ; 3.469 ; 0.000             ;
++----------+-------+-------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.266 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                                                                       ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 13.856 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.482      ; 5.565      ;
+; 14.368 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -1.532     ; 2.080      ;
+; 15.068 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.505      ; 4.424      ;
+; 15.068 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.505      ; 4.424      ;
+; 15.068 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.505      ; 4.424      ;
+; 15.068 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.505      ; 4.424      ;
+; 15.068 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.505      ; 4.424      ;
+; 15.778 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.711      ;
+; 17.478 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 2.399      ;
+; 17.486 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 2.391      ;
+; 17.673 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 2.204      ;
+; 18.552 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.396      ;
+; 18.552 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.396      ;
+; 18.552 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.396      ;
+; 18.552 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.396      ;
+; 18.552 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.396      ;
+; 18.690 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.258      ;
+; 18.690 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.258      ;
+; 18.690 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.258      ;
+; 18.690 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.258      ;
+; 18.690 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.258      ;
+; 18.728 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.220      ;
+; 18.728 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.220      ;
+; 18.728 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.220      ;
+; 18.728 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.220      ;
+; 18.728 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.220      ;
+; 18.797 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.151      ;
+; 18.797 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.151      ;
+; 18.797 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.151      ;
+; 18.797 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.151      ;
+; 18.797 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 1.151      ;
+; 18.807 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.135      ;
+; 18.812 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.130      ;
+; 18.826 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.116      ;
+; 18.831 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.111      ;
+; 18.905 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.037      ;
+; 18.910 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.032      ;
+; 18.957 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 0.991      ;
+; 18.957 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 0.991      ;
+; 18.957 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 0.991      ;
+; 18.957 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 0.991      ;
+; 18.957 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.039     ; 0.991      ;
+; 18.969 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.973      ;
+; 18.974 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.968      ;
+; 18.975 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.967      ;
+; 19.019 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.923      ;
+; 19.041 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.904      ;
+; 19.089 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.856      ;
+; 19.105 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.840      ;
+; 19.109 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.836      ;
+; 19.113 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.832      ;
+; 19.119 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.826      ;
+; 19.144 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.798      ;
+; 19.150 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.792      ;
+; 19.157 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.788      ;
+; 19.157 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.788      ;
+; 19.183 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.759      ;
+; 19.187 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.758      ;
+; 19.187 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.758      ;
+; 19.235 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.707      ;
+; 19.260 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.682      ;
+; 19.304 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 0.638      ;
+; 19.321 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.624      ;
+; 19.384 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.561      ;
+; 19.392 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.553      ;
+; 19.392 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.553      ;
+; 19.393 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.552      ;
+; 19.395 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.550      ;
+; 19.400 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.545      ;
+; 19.402 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.543      ;
+; 19.405 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.540      ;
+; 19.408 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.537      ;
+; 19.423 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.522      ;
+; 19.430 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.515      ;
+; 19.494 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.451      ;
+; 19.500 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.445      ;
+; 19.508 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.437      ;
+; 19.550 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.395      ;
+; 19.569 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.376      ;
+; 19.571 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.374      ;
+; 19.572 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.373      ;
+; 19.573 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.372      ;
+; 19.595 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 0.350      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                                                       ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.188 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.314      ;
+; 0.188 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.314      ;
+; 0.189 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.315      ;
+; 0.197 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.323      ;
+; 0.213 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.339      ;
+; 0.246 ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.372      ;
+; 0.251 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.377      ;
+; 0.260 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.386      ;
+; 0.298 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.424      ;
+; 0.299 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.425      ;
+; 0.300 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.426      ;
+; 0.301 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.427      ;
+; 0.302 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.428      ;
+; 0.302 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.428      ;
+; 0.309 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.435      ;
+; 0.319 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.445      ;
+; 0.330 ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.456      ;
+; 0.335 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.461      ;
+; 0.404 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.530      ;
+; 0.421 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.544      ;
+; 0.448 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.574      ;
+; 0.450 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.576      ;
+; 0.458 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.584      ;
+; 0.461 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.587      ;
+; 0.461 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.587      ;
+; 0.481 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.604      ;
+; 0.481 ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.604      ;
+; 0.513 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.639      ;
+; 0.516 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.642      ;
+; 0.524 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.650      ;
+; 0.527 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.653      ;
+; 0.531 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.654      ;
+; 0.545 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.674      ;
+; 0.545 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.674      ;
+; 0.545 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.674      ;
+; 0.545 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.674      ;
+; 0.545 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.674      ;
+; 0.561 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.684      ;
+; 0.588 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.711      ;
+; 0.678 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.801      ;
+; 0.691 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.814      ;
+; 0.699 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.822      ;
+; 0.702 ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.825      ;
+; 0.734 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.857      ;
+; 0.758 ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.881      ;
+; 0.786 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.909      ;
+; 0.799 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.922      ;
+; 0.810 ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.933      ;
+; 0.823 ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.946      ;
+; 0.839 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.968      ;
+; 0.839 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.968      ;
+; 0.839 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.968      ;
+; 0.839 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.968      ;
+; 0.839 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 0.968      ;
+; 1.013 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.142      ;
+; 1.013 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.142      ;
+; 1.013 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.142      ;
+; 1.013 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.142      ;
+; 1.013 ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.142      ;
+; 1.088 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.217      ;
+; 1.088 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.217      ;
+; 1.088 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.217      ;
+; 1.088 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.217      ;
+; 1.088 ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.217      ;
+; 1.202 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.331      ;
+; 1.202 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.331      ;
+; 1.202 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.331      ;
+; 1.202 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.331      ;
+; 1.202 ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.331      ;
+; 1.863 ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.010      ; 1.929      ;
+; 2.001 ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.010      ; 2.067      ;
+; 2.017 ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.010      ; 2.083      ;
+; 3.213 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready~_Duplicate_1                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 2.861      ;
+; 4.000 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[4]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.567      ; 3.651      ;
+; 4.000 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[3]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.567      ; 3.651      ;
+; 4.000 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[0]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.567      ; 3.651      ;
+; 4.000 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[1]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.567      ; 3.651      ;
+; 4.000 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|mem_address[2]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.567      ; 3.651      ;
+; 4.895 ; SW[0]                                                         ; TOP:inst|FSM:fsm_controller|ready                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.532      ; 4.483      ;
+; 5.472 ; TOP:inst|FSM:fsm_controller|ready                             ; LEDG[0]                                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.482     ; 1.990      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'CLOCK_50'                                                                                                                ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
+; 15.525 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 1.502      ; 3.964      ;
++--------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'CLOCK_50'                                                                                                                ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_UPDATE_ADDRESS    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CLEAR_ACC         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_READ          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_READ     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_LOAD_DATA     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_ACC_TRANSFER_DATA ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_CHECK_POSITION    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WRITE         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_MEM_WAIT_WRITE    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_READY             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
+; 3.469 ; SW[0]     ; TOP:inst|FSM:fsm_controller|current_state.S_RESET             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.564      ; 3.117      ;
++-------+-----------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 11.045 ; 0.181 ; 14.123   ; 3.469   ; 9.266               ;
+;  CLOCK_50        ; 11.045 ; 0.181 ; 14.123   ; 3.469   ; 9.266               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDG[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 88       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 88       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 11       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 11       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; CLOCK_50 ; CLOCK_50 ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Dec 04 12:50:14 2021
+Info: Command: quartus_sta Q2 -c Q2
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'Q2.out.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 11.045
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    11.045               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.402               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 14.123
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    14.123               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 4.864
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.864               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.659
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.659               0.000 CLOCK_50 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332146): Worst-case setup slack is 11.748
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    11.748               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.354
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.354               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 14.652
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    14.652               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 4.576
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.576               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.666
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.666               0.000 CLOCK_50 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332146): Worst-case setup slack is 13.856
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    13.856               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.181               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 15.525
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.525               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 3.469
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.469               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.266
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.266               0.000 CLOCK_50 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Sat Dec 04 12:50:17 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,9 @@
+module Controller(clock_in, ready, clock_out, reset);
+input clock_in, ready;
+output clock_out, reset;
+
+assign clock_out = clock_in;
+assign LEDG[0] = ready;
+assign reset = KEY[0];
+
+endmodule

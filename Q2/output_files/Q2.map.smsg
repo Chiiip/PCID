@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at FSM.v(27): always construct contains both blocking and non-blocking assignments File: C:/Users/limaa/Documents/PCID/Q2/FSM.v Line: 27
+Warning (10268): Verilog HDL information at FSM.v(80): always construct contains both blocking and non-blocking assignments File: C:/Users/limaa/Documents/PCID/Q2/FSM.v Line: 80

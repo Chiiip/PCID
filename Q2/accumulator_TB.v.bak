@@ -1,0 +1,40 @@
+`timescale 1ns/1ns
+
+module accumulator_test_bench();
+
+reg clk, clear, load, transfer;
+reg [15:0] data_in;
+wire [16:0] data_out;
+
+accumulator acc(clk, clear, load, transfer, data_in, data_out);
+
+initial
+begin
+    clk = 0;
+    forever #5 clk = !clk;
+end
+
+initial begin
+	$monitor("clk=%b, clear=%b, load=%b, transfer=%b, data_in=%d, data_out=%1d", clk, clear, load, transfer, data_in, data_out); 
+	clear = 1;
+	transfer = 0;
+	data_in = 15;
+	#5 clear = 0;
+	#5 clear = 1;
+	
+	#11 load = 1;
+	#14 load = 0;
+	#11 transfer = 1;
+	#14 transfer = 0;
+		
+	#20 data_in = 17;
+	#11 load = 1;
+	#14 load = 0;
+	#11 transfer = 1;
+	#14 transfer = 0;
+	
+	#20 $stop;
+
+	
+end
+endmodule

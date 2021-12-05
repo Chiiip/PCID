@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/limaa/Documents/PCID/Q2
+vremote_controller
+Z0 !s110 1638556134
+!i10b 1
+!s100 VNc[1d9G]=P=agZ8PA=^j1
+Ikb88kNjO7K081UC=1M4O42
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/limaa/Documents/PCID/Q1
+w1638555957
+8C:/Users/limaa/Documents/PCID/Q1/RemoteController.v
+FC:/Users/limaa/Documents/PCID/Q1/RemoteController.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1638556134.000000
+!s107 C:/Users/limaa/Documents/PCID/Q1/RemoteController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/limaa/Documents/PCID/Q1/RemoteController.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vremote_controller_test_bench
+R0
+!i10b 1
+!s100 RS@iT^Zcgba`i[O76;3]63
+I5M0^0l9h0N0jKPcz@HM2=3
+R1
+R2
+w1638120008
+8C:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v
+FC:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1638556133.000000
+!s107 C:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/limaa/Documents/PCID/Q1/RemoteController_TB.v|
+!i113 1
+R4
+R5

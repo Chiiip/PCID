@@ -31,14 +31,11 @@ parameter
    S_VALID_KEY_DETECTED = 3'b110;
 
 
-always @ (posedge clk)
+always @ (current_state or serial or counter or key_code or key_inv_code or KEY_EXISTS)
 begin	
 	case(current_state)
 	S_AWAITING_0:
 	begin
-		counter <= 4'b0000;
-		key_code <= 8'b00000000;
-		key_inv_code <= 8'b00000000;
 		if(serial == 1'b0) next_state <= S_AWAITING_1;
 		else next_state <= S_AWAITING_0;
 	end
@@ -52,39 +49,31 @@ begin
 		if(counter == 15)
 			begin
 			next_state <= S_READING_KEY_CODE;
-			counter <= 0;
 			end
 		else
 			begin
-			counter <= counter + 4'b0001;
 			next_state <= S_READING_CUSTOM_CODE;			
 			end
 	end
 	S_READING_KEY_CODE:
 	begin			
-		key_code = {key_code, serial};	
 		if(counter == 7)
 			begin
 			next_state <= S_READING_INV_KEY_CODE;
-			counter <= 0;
 			end
 		else
 			begin			
-			counter <= counter + 4'b0001;
 			next_state <= S_READING_KEY_CODE;
 			end
 	end
 	S_READING_INV_KEY_CODE:
 	begin		
-		key_inv_code = {key_inv_code, serial};
 		if(counter == 7)
 			begin
 			next_state <= S_COMPARISON;
-			counter <= 0;
 			end
 		else
 			begin			
-			counter <= counter + 4'b0001;
 			next_state <= S_READING_INV_KEY_CODE;	
 			end
 	end	
@@ -97,11 +86,7 @@ begin
 	S_VALID_KEY_DETECTED:
 	begin
 		if(counter == 2) next_state <= S_AWAITING_0;
-		else
-			begin
-			counter <= counter + 4'b0001;
-			next_state <= S_VALID_KEY_DETECTED;
-			end
+		else next_state <= S_VALID_KEY_DETECTED;
 	end
 	default: next_state <= S_AWAITING_0;
 	endcase
@@ -112,7 +97,38 @@ begin
 	if(!reset)
 		current_state <= S_AWAITING_0;
 	else
-		current_state <= next_state;
+		case(current_state)
+	S_AWAITING_0:
+	begin
+		counter <= 4'b0000;
+		key_code <= 8'b00000000;
+		key_inv_code <= 8'b00000000;
+	end
+	S_READING_CUSTOM_CODE:
+	begin
+		if(counter == 15) counter <= 0;
+		else counter <= counter + 4'b0001;
+	end
+	S_READING_KEY_CODE:
+	begin			
+		key_code = {key_code, serial};	
+		if(counter == 7) counter <= 0;
+		else counter <= counter + 4'b0001;
+	end
+	S_READING_INV_KEY_CODE:
+	begin		
+		key_inv_code = {key_inv_code, serial};
+		if(counter == 7) counter <= 0;
+		else counter <= counter + 4'b0001;
+	end	
+	S_VALID_KEY_DETECTED:
+	begin
+		if(counter == 2) counter <= counter;
+		else counter <= counter + 4'b0001;
+	end
+	default: next_state <= next_state;
+	endcase
+	current_state <= next_state;
 end
 
 always @ (current_state)
