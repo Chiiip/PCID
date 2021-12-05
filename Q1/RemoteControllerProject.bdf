@@ -21,7 +21,7 @@ refer to the applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -56 272 112 288)
+	(rect 248 344 416 360)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "KEY[0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -376 112 -208 128)
+	(rect -72 184 96 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLOCK_50" (rect 5 0 61 12)(font "Arial" ))
+	(text "CLOCK_50" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -56 304 112 320)
+	(rect 248 376 416 392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GPIO[0]" (rect 5 0 46 12)(font "Arial" ))
+	(text "IRDA_RXD" (rect 5 0 61 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 400 248 576 264)
+	(rect 704 320 880 336)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LEDG[0]" (rect 90 0 128 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -85,7 +85,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 400 288 576 304)
+	(rect 704 360 880 376)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LEDR[7..0]" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -100,7 +100,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -200 56 48 208)
+	(rect 104 128 352 280)
 	(text "clock_divider" (rect 87 0 174 16)(font "Arial" (font_size 10)))
 	(text "clock_divider_inst" (rect 8 136 96 148)(font "Arial" ))
 	(port
@@ -148,7 +148,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 168 232 360 344)
+	(rect 472 304 664 416)
 	(text "remote_controller" (rect 5 0 89 12)(font "Arial" ))
 	(text "remote_controller_inst" (rect 8 96 116 108)(font "Arial" ))
 	(port
@@ -229,65 +229,65 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 176 96))
 	)
-	(annotation_block (parameter)(rect 360 56 664 232))
+	(annotation_block (parameter)(rect 664 128 968 304))
 )
 (connector
-	(pt 112 280)
-	(pt 168 280)
+	(pt 416 352)
+	(pt 472 352)
 )
 (connector
-	(pt 360 264)
-	(pt 376 264)
+	(pt 664 336)
+	(pt 680 336)
 )
 (connector
-	(pt 376 264)
-	(pt 376 256)
+	(pt 680 336)
+	(pt 680 328)
 )
 (connector
-	(pt 400 256)
-	(pt 376 256)
+	(pt 704 328)
+	(pt 680 328)
 )
 (connector
-	(pt 360 280)
-	(pt 376 280)
+	(pt 664 352)
+	(pt 680 352)
 	(bus)
 )
 (connector
-	(pt 376 280)
-	(pt 376 296)
+	(pt 680 352)
+	(pt 680 368)
 	(bus)
 )
 (connector
-	(pt 376 296)
-	(pt 400 296)
+	(pt 680 368)
+	(pt 704 368)
 	(bus)
 )
 (connector
-	(pt 168 296)
-	(pt 128 296)
+	(pt 472 368)
+	(pt 432 368)
 )
 (connector
-	(pt 112 312)
-	(pt 128 312)
+	(pt 416 384)
+	(pt 432 384)
 )
 (connector
-	(pt 128 312)
-	(pt 128 296)
+	(pt 432 384)
+	(pt 432 368)
 )
 (connector
-	(pt 168 264)
-	(pt 128 264)
+	(pt 472 336)
+	(pt 432 336)
 )
 (connector
-	(pt -208 120)
-	(pt -200 120)
+	(pt 96 192)
+	(pt 104 192)
 )
 (connector
-	(pt 128 264)
-	(pt 128 120)
+	(pt 432 336)
+	(pt 432 192)
 )
 (connector
-	(text "CLOCK_76KHz" (rect 48 104 119 121)(font "Intel Clear" ))
-	(pt 48 120)
-	(pt 128 120)
+	(text "CLOCK_76KHz" (rect 352 176 423 193)(font "Intel Clear" ))
+	(pt 352 192)
+	(pt 432 192)
 )

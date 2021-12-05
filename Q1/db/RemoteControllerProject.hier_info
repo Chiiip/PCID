@@ -2,7 +2,7 @@
 LEDG[0] <= remote_controller:remote_controller_inst.ready
 CLOCK_50 => clock_divider:clock_divider_inst.inclk0
 KEY[0] => remote_controller:remote_controller_inst.reset
-GPIO[0] => remote_controller:remote_controller_inst.serial
+IRDA_RXD => remote_controller:remote_controller_inst.serial
 LEDR[0] <= remote_controller:remote_controller_inst.remote_key[0]
 LEDR[1] <= remote_controller:remote_controller_inst.remote_key[1]
 LEDR[2] <= remote_controller:remote_controller_inst.remote_key[2]

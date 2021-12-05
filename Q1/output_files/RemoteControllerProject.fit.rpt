@@ -1,5 +1,5 @@
 Fitter report for RemoteControllerProject
-Sat Dec 04 13:02:48 2021
+Sun Dec 05 13:50:58 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Dec 04 13:02:48 2021       ;
+; Fitter Status                      ; Successful - Sun Dec 05 13:50:58 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RemoteControllerProject                     ;
 ; Top-level Entity Name              ; RemoteControllerProject                     ;
@@ -146,12 +146,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.1%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -316,6 +316,7 @@ refer to the applicable agreement for further details.
 ; Location     ;                         ;              ; FL_RY            ; PIN_Y1        ; QSF Assignment ;
 ; Location     ;                         ;              ; FL_WE_N          ; PIN_AC10      ; QSF Assignment ;
 ; Location     ;                         ;              ; FL_WP_N          ; PIN_AE12      ; QSF Assignment ;
+; Location     ;                         ;              ; GPIO[0]          ; PIN_AB22      ; QSF Assignment ;
 ; Location     ;                         ;              ; GPIO[10]         ; PIN_AC19      ; QSF Assignment ;
 ; Location     ;                         ;              ; GPIO[11]         ; PIN_AF16      ; QSF Assignment ;
 ; Location     ;                         ;              ; GPIO[12]         ; PIN_AD19      ; QSF Assignment ;
@@ -491,7 +492,6 @@ refer to the applicable agreement for further details.
 ; Location     ;                         ;              ; HSMC_TX_D_P[9]   ; PIN_P27       ; QSF Assignment ;
 ; Location     ;                         ;              ; I2C_SCLK         ; PIN_B7        ; QSF Assignment ;
 ; Location     ;                         ;              ; I2C_SDAT         ; PIN_A8        ; QSF Assignment ;
-; Location     ;                         ;              ; IRDA_RXD         ; PIN_Y15       ; QSF Assignment ;
 ; Location     ;                         ;              ; KEY[1]           ; PIN_M21       ; QSF Assignment ;
 ; Location     ;                         ;              ; KEY[2]           ; PIN_N21       ; QSF Assignment ;
 ; Location     ;                         ;              ; KEY[3]           ; PIN_R24       ; QSF Assignment ;
@@ -829,6 +829,7 @@ refer to the applicable agreement for further details.
 ; I/O Standard ; RemoteControllerProject ;              ; FL_RY            ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; FL_WE_N          ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; FL_WP_N          ; 3.3-V LVTTL   ; QSF Assignment ;
+; I/O Standard ; RemoteControllerProject ;              ; GPIO[0]          ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; GPIO[10]         ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; GPIO[11]         ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; GPIO[12]         ; 3.3-V LVTTL   ; QSF Assignment ;
@@ -1004,7 +1005,6 @@ refer to the applicable agreement for further details.
 ; I/O Standard ; RemoteControllerProject ;              ; HSMC_TX_D_P[9]   ; LVDS          ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; I2C_SCLK         ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; I2C_SDAT         ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; RemoteControllerProject ;              ; IRDA_RXD         ; 3.3-V LVTTL   ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; KEY[1]           ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; KEY[2]           ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; RemoteControllerProject ;              ; KEY[3]           ; 2.5 V         ; QSF Assignment ;
@@ -1358,7 +1358,7 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; GPIO[0]  ; AB22  ; 4        ; 107          ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; IRDA_RXD ; Y15   ; 3        ; 56           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; KEY[0]   ; M23   ; 6        ; 115          ; 40           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -1408,8 +1408,8 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 +----------+-----------------+---------------+--------------+
 ; 1        ; 4 / 56 ( 7 % )  ; 2.5V          ; --           ;
 ; 2        ; 1 / 63 ( 2 % )  ; 3.3V          ; --           ;
-; 3        ; 0 / 73 ( 0 % )  ; 2.5V          ; --           ;
-; 4        ; 1 / 71 ( 1 % )  ; 3.3V          ; --           ;
+; 3        ; 1 / 73 ( 1 % )  ; 3.3V          ; --           ;
+; 4        ; 0 / 71 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 65 ( 0 % )  ; 2.5V          ; --           ;
 ; 6        ; 2 / 58 ( 3 % )  ; 2.5V          ; --           ;
 ; 7        ; 9 / 72 ( 13 % ) ; 2.5V          ; --           ;
@@ -1458,14 +1458,14 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; AA8      ; 154        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA9      ;            ;          ; GNDA1                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA10     ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA11     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AA11     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AA12     ; 188        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA13     ; 190        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA14     ; 191        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA15     ; 213        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA16     ; 211        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA17     ; 241        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA18     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AA18     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AA19     ; 264        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA20     ;            ;          ; GNDA4                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA21     ; 269        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1497,7 +1497,7 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; AB19     ; 253        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB20     ; 257        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AB21     ; 266        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AB22     ; 265        ; 4        ; GPIO[0]                                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AB22     ; 265        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB23     ; 276        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB24     ; 274        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB25     ; 292        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1537,24 +1537,24 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; AD3      ; 96         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD4      ; 130        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD5      ; 128        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD6      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AD6      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD7      ; 134        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD8      ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AD9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD10     ; 149        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD11     ; 186        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD12     ; 182        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AD13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD14     ; 196        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD15     ; 204        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD17     ; 222        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD18     ; 237        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD19     ; 248        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AD20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD21     ; 259        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD22     ; 268        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD23     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AD23     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD24     ; 260        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD25     ; 255        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD26     ; 281        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1644,32 +1644,32 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; AG26     ; 270        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AH2      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AH2      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH3      ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH4      ; 142        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH5      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AH5      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH6      ; 146        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH7      ; 151        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH8      ; 157        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AH9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH10     ; 168        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH11     ; 176        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH12     ; 194        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
+; AH13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH14     ; 200        ; 3        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AH15     ; 202        ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AH16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AH16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH17     ; 208        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH18     ; 218        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH19     ; 220        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AH20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH21     ; 224        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH22     ; 228        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH23     ; 230        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH24     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AH24     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH25     ; 246        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH26     ; 271        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH27     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; AH27     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; B1       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; B2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B3       ; 534        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -2188,7 +2188,7 @@ The pin-out file can be found in C:/Users/limaa/Documents/PCID/Q1/output_files/R
 ; Y12      ; 187        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y13      ; 189        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y14      ; 197        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; Y15      ; 198        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; Y15      ; 198        ; 3        ; IRDA_RXD                                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y16      ; 250        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y17      ; 249        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -2248,7 +2248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[0]   ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; GPIO[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; IRDA_RXD ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; CLOCK_50 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -2259,7 +2259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; KEY[0]              ;                   ;         ;
-; GPIO[0]             ;                   ;         ;
+; IRDA_RXD            ;                   ;         ;
 ; CLOCK_50            ;                   ;         ;
 +---------------------+-------------------+---------+
 
@@ -2351,7 +2351,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; GPIO[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; IRDA_RXD           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -2440,8 +2440,10 @@ Warning (332049): Ignored set_clock_uncertainty at RemoteControllerProject.out.s
 Warning (332049): Ignored set_clock_uncertainty at RemoteControllerProject.out.sdc(64): Argument -fall_to with value [get_clocks {clock_divider_inst|altpll_component|auto_generated|pll1|clk[0]}] contains zero elements File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 64
 Warning (332049): Ignored set_input_delay at RemoteControllerProject.out.sdc(71): Argument -clock is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 71
     Info (332050): set_input_delay -add_delay  -clock [get_clocks {clock_divider_inst|altpll_component|auto_generated|pll1|clk[0]}]  1315.000 [get_ports {CLOCK_50}] File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 71
-Warning (332049): Ignored set_input_delay at RemoteControllerProject.out.sdc(72): Argument -clock is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 72
+Warning (332174): Ignored filter at RemoteControllerProject.out.sdc(72): GPIO[0] could not be matched with a port File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 72
+Warning (332049): Ignored set_input_delay at RemoteControllerProject.out.sdc(72): Argument <targets> is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 72
     Info (332050): set_input_delay -add_delay  -clock [get_clocks {clock_divider_inst|altpll_component|auto_generated|pll1|clk[0]}]  1315.000 [get_ports {GPIO[0]}] File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 72
+Warning (332049): Ignored set_input_delay at RemoteControllerProject.out.sdc(72): Argument -clock is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 72
 Warning (332049): Ignored set_input_delay at RemoteControllerProject.out.sdc(73): Argument -clock is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 73
     Info (332050): set_input_delay -add_delay  -clock [get_clocks {clock_divider_inst|altpll_component|auto_generated|pll1|clk[0]}]  1315.000 [get_ports {KEY[0]}] File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 73
 Warning (332049): Ignored set_output_delay at RemoteControllerProject.out.sdc(80): Argument -clock is an empty collection File: C:/Users/limaa/Documents/PCID/Q1/RemoteControllerProject.out.sdc Line: 80
@@ -2627,6 +2629,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "FL_RY" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_WE_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_WP_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO[10]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO[11]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO[12]" is assigned to location or region, but does not exist in design
@@ -2802,7 +2805,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "HSMC_TX_D_P[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "I2C_SCLK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "I2C_SDAT" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "IRDA_RXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
@@ -3006,14 +3008,14 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin GPIO[0] uses I/O standard 3.3-V LVTTL at AB22
+    Info (169178): Pin IRDA_RXD uses I/O standard 3.3-V LVTTL at Y15
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2
 Info (144001): Generated suppressed messages file C:/Users/limaa/Documents/PCID/Q1/output_files/RemoteControllerProject.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 544 warnings
-    Info: Peak virtual memory: 6263 megabytes
-    Info: Processing ended: Sat Dec 04 13:02:48 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+Info: Quartus Prime Fitter was successful. 0 errors, 546 warnings
+    Info: Peak virtual memory: 6281 megabytes
+    Info: Processing ended: Sun Dec 05 13:50:58 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+
