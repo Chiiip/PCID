@@ -5,14 +5,15 @@ add wave -noupdate -radix unsigned /FSM_test_bench/v
 add wave -noupdate -radix unsigned /FSM_test_bench/x
 add wave -noupdate -radix unsigned /FSM_test_bench/y
 add wave -noupdate -radix unsigned /FSM_test_bench/address
-add wave -noupdate -radix unsigned /FSM_test_bench/read_enable
+add wave -noupdate -format Literal -radix unsigned /FSM_test_bench/read_enable
 add wave -noupdate -format Literal -radix unsigned /FSM_test_bench/active_MAC
 add wave -noupdate -format Literal -radix unsigned /FSM_test_bench/reset_MAC
 add wave -noupdate -format Literal -radix unsigned /FSM_test_bench/ready
+add wave -noupdate /FSM_test_bench/clock
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 150
+configure wave -namecolwidth 335
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -26,4 +27,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1 ns}
+WaveRestoreZoom {1637519 ps} {1639525 ps}

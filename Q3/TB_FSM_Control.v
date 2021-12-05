@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+`timescale 1ps/1ps
 module FSM_test_bench();
 
 reg start, reset, clock;
@@ -15,6 +15,7 @@ integer count_v;
 integer count_x;
 integer count_y;
 integer up_read, down_read, up_active;
+integer count_address = 0;
 
 
 FSM_Control DUV(start, clock, reset, ready, u, v, x, y, active_MAC, read_enable, address, reset_MAC);
@@ -142,6 +143,25 @@ begin
 	begin
 		@(x)
 			count_x = count_x + 1;
+	end
+end
+
+initial
+begin
+    //Verificando se o endereço está sendo incrementado de 0 a 63 e depois voltando para 0
+	repeat (65)
+	begin
+		@(address)
+            if (address != count_address)
+            begin
+                if (address == 0 && count_address == 64) count_address = count_address + 1;
+                else
+                begin
+                    $display("\n------------ O address não está sendo incrementado de forma correta! ------------\n"); 
+                    $stop;
+                end
+            end
+			else count_address = count_address + 1;
 	end
 end
 

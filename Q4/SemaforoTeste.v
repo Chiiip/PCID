@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module Semaforo_test_bench();
 
 reg A, B, C, D;
