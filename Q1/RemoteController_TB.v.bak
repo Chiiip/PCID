@@ -43,7 +43,7 @@ initial begin
         key_value = key_value << 1;
     end  
 // INV KEY CODE  
-    key_inv_value = 8'b11110000;
+    key_inv_value = 8'b01110000;
     repeat(8)
     begin
         #10 serial = key_inv_value[7];
